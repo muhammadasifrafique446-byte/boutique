@@ -471,9 +471,9 @@
             }
         }
         /* Flashing Al-Munir */
-        
+        .flash-text,
         .flashing-text {
-            
+            animation: flashingBold 0.6s ease-in-out infinite;
         }
 
         /* Animated Circle with Flashing */
@@ -529,6 +529,20 @@
             text-align: center;
         }
 
+        @keyframes flashingBold {
+            0%, 100% {
+                opacity: 1;
+                font-weight: 900;
+                text-shadow: 0 0 10px rgba(212, 20, 90, 0.5);
+            }
+            50% {
+                opacity: 0.3;
+                font-weight: 700;
+                text-shadow: none;
+            }
+        }
+
+        @keyframes pulseRing {
             0% {
                 transform: scale(1);
                 opacity: 1;
@@ -554,6 +568,38 @@
                 font-size: 2.2rem;
             }
         }
+        /* Multi-Color Flashing Al-Munir */
+        .flash-colors {
+            animation: multiColorFlash 0.8s ease-in-out infinite;
+            font-weight: 900;
+        }
+
+        @keyframes multiColorFlash {
+            0% {
+                color: #FF1744;
+                text-shadow: 0 0 20px rgba(255, 23, 68, 0.8);
+            }
+            20% {
+                color: #F57F17;
+                text-shadow: 0 0 20px rgba(245, 127, 23, 0.8);
+            }
+            40% {
+                color: #FFD600;
+                text-shadow: 0 0 20px rgba(255, 214, 0, 0.8);
+            }
+            60% {
+                color: #00BCD4;
+                text-shadow: 0 0 20px rgba(0, 188, 212, 0.8);
+            }
+            80% {
+                color: #D946EF;
+                text-shadow: 0 0 20px rgba(217, 70, 239, 0.8);
+            }
+            100% {
+                color: #FF1744;
+                text-shadow: 0 0 20px rgba(255, 23, 68, 0.8);
+            }
+        }
     </style>
 </head>
 <body>
@@ -569,7 +615,7 @@
     <nav>
         <div class="container">
             <div class="brand-info">
-                <h1>Al-Munir Boutique 🌹</h1>
+                <h1><span class="flash-text">Al-Munir</span> Boutique 🌹</h1>
                 <p>✨ Stitched & Unstitched Dresses ✨</p>
             </div>
             <div class="dress-models">
@@ -588,7 +634,7 @@
     <section class="animated-circle-section">
         <div class="circle-container">
             <div class="flashing-circle">
-                <span>Al-Munir</span>
+                <span class="flashing-text">Al-Munir</span>
             </div>
         </div>
     </section>
